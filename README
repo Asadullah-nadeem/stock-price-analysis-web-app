@@ -1,0 +1,71 @@
+```markdown
+# Stock Price Analysis Web App
+
+This web app allows users to analyze stock prices using data fetched from Yahoo Finance. Users can input the stock ticker, start date, and end date to visualize the stock price trends and calculate daily returns.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- Fetches stock data using Yahoo Finance API.
+- Generates an interactive stock price plot using Plotly Express.
+- Calculates and displays daily returns.
+- Supports user input for stock ticker, start date, and end date.
+- Interactive plot with zooming functionality.
+
+## Getting Started
+
+To run the web app locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Asadullah-nadeem/stock-price-analysis-web-app.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd stock-price-analysis-web-app
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the Flask app:
+
+   ```bash
+   python app.py
+   ```
+
+5. Open your browser and visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to access the web app.
+
+## Usage
+
+1. Enter the stock ticker, start date, and end date in the input form.
+2. Click the "Submit" button to fetch and analyze the stock data.
+3. View the interactive stock price plot and daily return information.
+
+## Dependencies
+
+- Flask
+- yfinance
+- pandas
+- plotly
+- plotly.express
+
+Install the dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
