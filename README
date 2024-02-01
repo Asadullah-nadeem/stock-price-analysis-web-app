@@ -1,11 +1,3 @@
-
-
-  
-
-```markdown
-# Stock Price Analysis Web App
-This web app allows users to analyze stock prices using data fetched from Yahoo Finance. Users can input the stock ticker, start date, and end date to visualize the stock price trends and calculate daily returns.
-
 ## Features
 
 - Fetches stock data using Yahoo Finance API.
@@ -42,7 +34,7 @@ To run the web app locally, follow these steps:
    python app.py
    ```
 
-5. Open your browser and visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to access the web app.
+5. Open your browser and visit [http://127.0.0.1:5000/] to access the web app.
 
 ## Usage
 
@@ -60,6 +52,6 @@ To run the web app locally, follow these steps:
 
 Install the dependencies using:
 
-```bash
-pip install -r requirements.txt
-```
+ ```bash
+   pip install -r requirements.txt
+  ```
