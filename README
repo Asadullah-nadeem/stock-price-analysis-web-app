@@ -1,16 +1,6 @@
 ```markdown
 # Stock Price Analysis Web App
-
 This web app allows users to analyze stock prices using data fetched from Yahoo Finance. Users can input the stock ticker, start date, and end date to visualize the stock price trends and calculate daily returns.
-
-## Table of Contents
-
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
