@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Price Analysis</title>
 
-    <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Stock Price Analysis</h1>
 
-        <!-- Form to get user input -->
+
         <form class="form-inline" method="POST" action="/">
             <div class="form-group mx-sm-3 mb-2">
                 <label for="stock_ticker" class="sr-only">Stock Ticker:</label>
@@ -33,15 +32,12 @@
         </form>
 
         {% if plot_html %}
-            <!-- Display the stock price plot -->
+         
             <div id="stock-plot">{{ plot_html|safe }}</div>
-
-            <!-- Display the stock data table -->
             {{ stock_data|safe }}
         {% endif %}
     </div>
 
-    <!-- Add Bootstrap JavaScript (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
