@@ -1,9 +1,5 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", function() {
-    // JavaScript animations or interactions can be added here
-    // Example: Change background color on button click
-    document.getElementById("submitBtn").addEventListener("click", function() {
+       document.getElementById("submitBtn").addEventListener("click", function() {
         document.body.style.backgroundColor = getRandomColor();
     });
 
