@@ -45,7 +45,7 @@ To run the web app locally, follow these steps:
 ## Dependencies
 
 - Flask
-- yfinance
+- finance
 - pandas
 - plotly
 - plotly.express
