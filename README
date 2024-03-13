@@ -42,16 +42,4 @@ To run the web app locally, follow these steps:
 2. Click the "Submit" button to fetch and analyze the stock data.
 3. View the interactive stock price plot and daily return information.
 
-## Dependencies
 
-- Flask
-- finance
-- pandas
-- plotly
-- plotly.express
-
-Install the dependencies using:
-
- ```bash
-   pip install -r requirements.txt
-  ```
