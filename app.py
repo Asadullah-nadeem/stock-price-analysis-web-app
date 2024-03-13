@@ -18,7 +18,7 @@ def plot_stock_data(stock_data):
         xaxis_title='Date',
         yaxis_title='Stock Price',
         showlegend=True,
-        xaxis_rangeslider_visible=True,  # Add rangeslider for zooming
+        xaxis_rangeslider_visible=True, 
     )
 
     # Convert plot to HTML
@@ -33,21 +33,16 @@ def calculate_returns(stock_data):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # Get user input from the form
         stock_ticker = request.form['stock_ticker']
         start_date = request.form['start_date']
         end_date = request.form['end_date']
 
-        # Fetch stock data
         stock_data = get_stock_data(stock_ticker, start_date, end_date)
 
-        # Plot stock data and get plot HTML
         plot_html = plot_stock_data(stock_data)
 
-        # Calculate and display returns
         stock_data = calculate_returns(stock_data)
         
-        # Pass the plot HTML and other data to the HTML template
         return render_template('index.html', plot_html=plot_html, stock_data=stock_data[['Close', 'Daily Return']].head().to_html())
 
     return render_template('index.html', plot_html=None, stock_data=None)
