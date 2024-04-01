@@ -1,17 +1,10 @@
-Certainly! Below is a template for a README file for your stock price analysis web app:
-
----
-
-# Stock Price Analysis Web App
-
-Welcome to the Stock Price Analysis Web App! This web application allows you to fetch stock data using the Yahoo Finance API, generate interactive stock price plots using Plotly Express, calculate and display daily returns, and supports user input for stock ticker, start date, and end date.
 
 ## Features
 
 - Fetches stock data using Yahoo Finance API.
 - Generates an interactive stock price plot using Plotly Express.
 - Calculates and displays daily returns.
-- Supports user input for stock ticker, start date, and end date.
+- Supports user input for the stock ticker, start date, and end-date.
 - Interactive plot with zooming functionality.
 
 ## Getting Started
@@ -20,27 +13,19 @@ To run the web app locally, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
    git clone https://github.com/Asadullah-nadeem/stock-price-analysis-web-app.git
-   ```
 
 2. Navigate to the project directory:
 
-   ```bash
-   cd stock-price-analysis-web-app
-   ```
-
+    cd stock-price-analysis-web-app
+   
 3. Install dependencies:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+      pip install -r requirements.txt
 
 4. Run the Flask app:
 
-   ```bash
-   python app.py
-   ```
+      python app.py
 
 5. Open your browser and visit [http://127.0.0.1:5000/] to access the web app.
 
@@ -49,15 +34,3 @@ To run the web app locally, follow these steps:
 1. Enter the stock ticker, start date, and end date in the input form.
 2. Click the "Submit" button to fetch and analyze the stock data.
 3. View the interactive stock price plot and daily return information.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Yahoo Finance API](https://finance.yahoo.com/)
-- [Plotly Express](https://plotly.com/python/plotly-express/)
-- [Flask](https://flask.palletsprojects.com/)
-
----
