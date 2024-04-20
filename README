@@ -1,6 +1,7 @@
 
 ## Features
 
+
 - Fetches stock data using Yahoo Finance API.
 - Generates an interactive stock price plot using Plotly Express.
 - Calculates and displays daily returns.
