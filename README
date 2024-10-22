@@ -1,5 +1,5 @@
 
-## Features
+Features
 
 
 - Fetches stock data using Yahoo Finance API.
@@ -8,7 +8,7 @@
 - Supports user input for the stock ticker, start date, and end-date.
 - Interactive plot with zooming functionality.
 
-## Getting Started
+Getting Started
 
 To run the web app locally, follow these steps:
 
@@ -30,7 +30,7 @@ To run the web app locally, follow these steps:
 
 5. Open your browser and visit [http://127.0.0.1:5000/] to access the web app.
 
-## Usage
+Usage
 
 1. Enter the stock ticker, start date, and end date in the input form.
 2. Click the "Submit" button to fetch and analyze the stock data.
