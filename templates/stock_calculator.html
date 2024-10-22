@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Stock Analysis</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .bounce-in {
+            animation: bounceIn 1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <div class="text-white text-xl font-bold">Stock Analysis</div>
+            <div>
+                <ul class="flex flex-wrap space-x-4">
+                    <li><a href="/" class="text-white hover:underline">Home</a></li>
+                    <!-- <li><a href="/today-stock" class="text-white hover:underline">Today's Stock</a></li> -->
+                    <li><a href="/about" class="text-white hover:underline">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-10 fade-in">
+        
+        <h1 class="text-4xl font-bold text-center text-blue-600 mb-10"> Stock Analysis</h1>
+    
+        <!-- Form Section -->
+        <div class="flex justify-center">
+            <form class="w-full max-w-lg bg-white p-6 rounded-lg shadow-lg" method="POST" action="/">
+
+                <div class="mb-4"> 
+                    <label for="stock_ticker" class="block text-gray-700 text-sm font-bold mb-2">(Optional)Stock Ticker:</label>
+                    <select name="stock_ticker" class="form-select w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" >
+                        <option value="" disabled selected>Select Stock Ticker</option>
+                        <option value="AAPL">AAPL - Apple Inc.</option>
+                        <option value="MSFT">MSFT - Microsoft Corporation</option>
+                        <option value="GOOGL">GOOGL - Alphabet Inc. (Class A)</option>
+                        <option value="DIXON.NS">DIXON - Dixon Technologies (India) Limited</option>
+                        <option value="TATAPOWER.NS">TATAPOWER - Tata Power Company Limited</option>
+                        <option value="INFY.NS">INFY - Infosys Limited</option>
+                        <option value="HINDUNILVR.NS">HINDUNILVR - Hindustan Unilever Limited</option>
+                        <option value="ICICIBANK.NS">ICICIBANK - ICICI Bank Limited</option>
+                        <option value="LT.NS">LT - Larsen & Toubro Limited</option>
+                        <option value="KOTAKBANK.NS">KOTAKBANK - Kotak Mahindra Bank Limited</option>
+                        <option value="BHARTIARTL.NS">BHARTIARTL - Bharti Airtel Limited</option>
+                        <option value="AXISBANK.NS">AXISBANK - Axis Bank Limited</option>
+                        <option value="SBI.NS">SBI - State Bank of India</option>
+                        <option value="ITC.NS">ITC - ITC Limited</option>
+                        <option value="MARUTI.NS">MARUTI - Maruti Suzuki India Limited</option>
+                        <option value="HCLTECH.NS">HCLTECH - HCL Technologies Limited</option>
+                        <option value="TITAN.NS">TITAN - Titan Company Limited</option>
+                        <option value="SUNPHARMA.NS">SUNPHARMA - Sun Pharmaceutical Industries Limited</option>
+                        <option value="WIPRO.NS">WIPRO - Wipro Limited</option>
+                        <option value="TATASTEEL.NS">TATASTEEL - Tata Steel Limited</option>
+                        <option value="NESTLEIND.NS">NESTLEIND - Nestlé India Limited</option>
+                        <option value="ONGC.NS">ONGC - Oil and Natural Gas Corporation Limited</option>
+                        <option value="LUPIN.NS">LUPIN - Lupin Limited</option>
+                        <option value="BajajFinance.NS">BAJFINANCE - Bajaj Finance Limited</option>
+                        <option value="BAJFIN.NS">BAJFIN - Bajaj Finserv Limited</option>
+                        <option value="ADANIGREEN.NS">ADANIGREEN - Adani Green Energy Limited</option>
+                        <option value="GAIL.NS">GAIL - GAIL (India) Limited</option>
+                        <option value="TECHM.NS">TECHM - Tech Mahindra Limited</option>
+                        <option value="DRREDDY.NS">DRREDDY - Dr. Reddy's Laboratories Limited</option>
+                        <option value="INDUSINDBK.NS">INDUSINDBK - IndusInd Bank Limited</option>
+                        <option value="M&M.NS">M&M - Mahindra & Mahindra Limited</option>
+                        <option value="HINDALCO.NS">HINDALCO - Hindalco Industries Limited</option>
+                        <option value="BIOCON.NS">BIOCON - Biocon Limited</option>
+                        <option value="PVR.NS">PVR - PVR Limited</option>
+                        <option value="CIPLA.NS">CIPLA - Cipla Limited</option>
+                        <option value="BHEL.NS">BHEL - Bharat Heavy Electricals Limited</option>
+                        <option value="DABUR.NS">DABUR - Dabur India Limited</option>
+                        <option value="AMBUJACEM.NS">AMBUJACEM - Ambuja Cements Limited</option>
+                        <option value="ACC.NS">ACC - ACC Limited</option>
+                        <option value="BEL.NS">BEL - Bharat Electronics Limited</option>
+                    </select>
+                </div>
+                
+
+                <div class="mb-4">
+                    <label for="stock_ticker" class="block text-gray-700 text-sm font-bold mb-2">Stock Ticker:</label>
+                    <input type="text" name="stock_ticker" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" placeholder="Enter Stock Ticker">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="start_date" class="block text-gray-700 text-sm font-bold mb-2">Start Date:</label>
+                    <input type="date" name="start_date" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" required>
+                </div>
+    
+                <div class="mb-4">
+                    <label for="end_date" class="block text-gray-700 text-sm font-bold mb-2">End Date:</label>
+                    <input type="date" name="end_date" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" required>
+                </div>
+    
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 bounce-in">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Additional Stock Information -->
+        {% if additional_info %}
+        <h2 class="text-2xl font-bold mt-10 text-blue-600">{{ additional_info['longName'] }}  Stock Information</h2>
+        <div class="bg-white p-6 rounded-lg shadow-lg mt-4">
+            <ul class="list-disc pl-5">
+                <!-- <li><strong>Exchange Timezone:</strong> {{ additional_info['exchangeTimezoneName'] }}</li> -->
+                <!-- <li><strong>Regular Market Price:</strong> {{ additional_info['regularMarketPrice'] }}</li> -->
+                <li><strong>52 Week High:</strong> {{ additional_info['fiftyTwoWeekHigh'] }}</li>
+                <li><strong>52 Week Low:</strong> {{ additional_info['fiftyTwoWeekLow'] }}</li>
+                <li><strong>Regular Market Day High:</strong> {{ additional_info['regularMarketDayHigh'] }}</li>
+                <li><strong>Regular Market Day Low:</strong> {{ additional_info['regularMarketDayLow'] }}</li>
+                <li><strong>Long Name:</strong> {{ additional_info['longName'] }}</li>
+                <li><strong>Short Name:</strong> {{ additional_info['shortName'] }}</li>
+                <!-- <li><strong>Chart Previous Close:</strong> {{ additional_info['chartPreviousClose'] }}</li> -->
+                <li><strong>Previous Close:</strong> {{ additional_info['previousClose'] }}</li>
+            </ul>
+        </div>
+        {% endif %}
+        
+        <!-- Error message -->
+        {% if error %}
+        <div class="text-red-600 text-center mt-4">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Plot Section -->
+        <div class="mt-10">
+            {% if plot_html %}
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div id="stock-plot" class="fade-in">
+                        {{ plot_html|safe }}
+                    </div>
+                    <div class="mt-6 overflow-x-auto">
+                        {{ stock_data|safe }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    
+</body>
+</html>

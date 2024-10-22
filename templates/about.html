@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Stock Analysis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="bg-blue-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-xl font-bold">Stock Analysis</div>
+            <div>
+                <ul class="flex space-x-4">
+                    <li><a href="/" class="text-white hover:underline">Home</a></li>
+                    <li><a href="/about" class="text-white hover:underline">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4 text-gray-800">Stock Price Analysis Web Application</h1>
+        <p class="text-gray-700 mb-4">
+            Welcome to the Stock Price Analysis Web App! This application makes it simple for you to track and analyze stock prices. By using this app, you can look up stocks, see their price trends, and calculate daily returns. It's built to be user-friendly, even if you're not familiar with stock markets.
+        </p>
+        
+        <p class="text-gray-700 mb-4">
+            This app uses a tool called <strong>`yfinance`</strong> to fetch stock data. It shows charts that help you understand how the stock prices are changing over time. You can select the stock you want to track by typing in its ticker symbol, like <strong>GOOGL</strong> for Google or <strong>AAPL</strong> for Apple.
+        </p>
+
+        <h2 class="text-2xl font-semibold mb-2 text-gray-800">Key Features</h2>
+        <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li><strong>Stock Data Fetching:</strong> Users can enter stock tickers and date ranges to get past stock prices.</li>
+            <li><strong>Interactive Plot:</strong> A graph shows how stock prices move over time, making it easy to see trends.</li>
+            <li><strong>Daily Return Calculation:</strong> You can calculate how much the stock price changed from one day to the next.</li>
+            <li><strong>Error Handling:</strong> The app will alert you if there are any issues, like entering a wrong date or stock symbol.</li>
+            <li><strong>Responsive Design:</strong> The app is built using Tailwind CSS, which ensures it looks good on all devices, whether you're using a phone or a computer.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mb-2 text-gray-800">Enhancements</h2>
+        <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li><strong>Faster Performance:</strong> The app could be improved by using a method called asynchronous programming. This helps the app handle more requests at once and work faster.</li>
+            <li><strong>Real-Time Data:</strong> In the future, we plan to add real-time stock updates so you can see stock price changes as they happen.</li>
+            <li><strong>Caching:</strong> The app can store frequent stock requests, so it loads faster when looking up the same stock again.</li>
+            <li><strong>Database Integration:</strong> Adding a database can help save stock history and user settings, so you don’t have to re-enter them every time you use the app.</li>
+        </ul>
+
+        <p class="text-gray-700 mb-4">
+            Our future goal is to add more features like real-time stock tracking, better speed, and options to save your favorite stocks. We hope this makes it easier for you to manage and understand your stock investments.
+        </p>
+
+        <p class="text-gray-700 mb-4">
+            <strong>GitHub Repository Link:</strong> <a href="https://github.com/Asadullah-nadeem/stock-price-analysis-web-app" class="text-blue-500 underline">Stock Price Analysis Web App</a>
+        </p>
+    </div>
+
+    <footer class="bg-blue-600 text-white p-4 mt-10">
+        <div class="container mx-auto text-center">
+            <p>&copy; Stock Analysis. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
